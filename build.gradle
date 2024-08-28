@@ -73,3 +73,20 @@ dependencies {
     )
 }
 
+tasks.withType(Test) {
+    enabled = false
+}
+
+task printCombinedClasspath {
+    doLast {
+        def combinedClasspath = files()
+
+        tasks.withType(JavaCompile).each { task ->
+            combinedClasspath += task.classpath
+        }
+
+        println "Combined classpath:"
+        println combinedClasspath.asPath
+    }
+}
+

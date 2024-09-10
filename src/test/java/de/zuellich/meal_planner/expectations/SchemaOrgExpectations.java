@@ -1,22 +1,5 @@
 package de.zuellich.meal_planner.expectations;
-
-import de.zuellich.meal_planner.datatypes.Ingredient;
-import de.zuellich.meal_planner.datatypes.IngredientUnit;
-import de.zuellich.meal_planner.datatypes.Recipe;
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * A class that allows us to store the expectations (Recipe instances) for the SchemaOrg parser
- * tests. This enables us to use a parametrized test case.
- */
 public class SchemaOrgExpectations {
-
-  /**
-   * Return the expected recipe instance for the first recipe.
-   *
-   * @return The expected instance representing a recipe.
-   */
   public static Recipe getSchemaOrg01() {
     String name = "Quick Teriyaki Chicken Rice Bowls";
     String url = "";
@@ -31,10 +14,8 @@ public class SchemaOrgExpectations {
     ingredientList.add(new Ingredient("cornstarch", 1, IngredientUnit.TBSP));
     ingredientList.add(new Ingredient("rice", 0, IngredientUnit.NULL));
     ingredientList.add(new Ingredient("steamed broccoli", 0, IngredientUnit.NULL));
-
     return new Recipe(name, ingredientList, url);
   }
-
   public static Recipe getSchemaOrg02() {
     String name = "Best Chimichurri Sauce";
     String url = "";
@@ -50,10 +31,8 @@ public class SchemaOrgExpectations {
     ingredientList.add(
         new Ingredient("chile pepper or a pinch of red pepper flakes", 0.5f, IngredientUnit.NULL));
     ingredientList.add(new Ingredient("fresh oregano leaves", 2, IngredientUnit.TBSP));
-
     return new Recipe(name, ingredientList, url);
   }
-
   public static List<Ingredient> getIngredients03() {
     List<Ingredient> ingredientList = new ArrayList<>();
     ingredientList.add(new Ingredient("(12 oz) wide egg noodles", 1, IngredientUnit.BAG));
@@ -73,10 +52,8 @@ public class SchemaOrgExpectations {
     ingredientList.add(
         new Ingredient(
             "shredded parmesan cheese, provolone, or Italian blend", 1, IngredientUnit.CUP));
-
     return ingredientList;
   }
-
   public static Recipe getSchemaOrg03() {
     String name = "Tomato Beef Country Casserole";
     String url = "";

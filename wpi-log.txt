@@ -1,913 +1,219 @@
++ PROJECT_PATH=../dataset/pre_nullgtn_without_s_mealPlanner
++ CF_BINARY=../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ COMPILED_CLASSES_FOLDER=../dataset/pre_nullgtn_without_s_mealPlanner/classes
++ LIB_FOLDER=../dataset/pre_nullgtn_without_s_mealPlanner/lib
++ SRC_FILES=../dataset/pre_nullgtn_without_s_mealPlanner/cf_srcs.txt
++ CLASSPATH_DIR=../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ echo 'CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac'
 CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:36: warning: (dereference.of.nullable) $$ 1 $$ article $$ ( 893, 900 ) $$ dereference of possibly-null reference article
-    if (article.containsKey("name")) {
-        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:37: warning: (dereference.of.nullable) $$ 1 $$ article.get("name") $$ ( 937, 956 ) $$ dereference of possibly-null reference article.get("name")
-      name = article.get("name").toString();
-                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:39: warning: (argument) $$ 4 $$ clientId $$ BaseOAuth2ProtectedResourceDetails.setClientId $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1517, 1525 ) $$ incompatible argument for parameter clientId of BaseOAuth2ProtectedResourceDetails.setClientId.
-    resourceDetails.setClientId(clientId);
-                                ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:40: warning: (argument) $$ 4 $$ clientSecret $$ BaseOAuth2ProtectedResourceDetails.setClientSecret $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1564, 1576 ) $$ incompatible argument for parameter clientSecret of BaseOAuth2ProtectedResourceDetails.setClientSecret.
-    resourceDetails.setClientSecret(clientSecret);
-                                    ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:41: warning: (argument) $$ 4 $$ accessTokenUri $$ BaseOAuth2ProtectedResourceDetails.setAccessTokenUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1617, 1631 ) $$ incompatible argument for parameter accessTokenUri of BaseOAuth2ProtectedResourceDetails.setAccessTokenUri.
-    resourceDetails.setAccessTokenUri(accessTokenUri);
-                                      ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:42: warning: (argument) $$ 4 $$ userAuthorizationUri $$ AbstractRedirectResourceDetails.setUserAuthorizationUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1678, 1694 ) $$ incompatible argument for parameter userAuthorizationUri of AbstractRedirectResourceDetails.setUserAuthorizationUri.
-    resourceDetails.setUserAuthorizationUri(authorizationUri);
-                                            ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:55: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1891, 1898 ) $$ incompatible argument for parameter arg1 of Map.put.
-      requestParameter.put("id", boardId);
-                                 ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:64: warning: (argument) $$ 4 $$ arg0 $$ List.addAll $$ @Initialized @Nullable List<@Initialized @NonNull Pin> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin> $$ ( 2197, 2225 ) $$ incompatible argument for parameter arg0 of List.addAll.
-      result.addAll(response.getBody().getPins());
-                                              ^
-  found   : @Initialized @Nullable List<@Initialized @NonNull Pin>
-  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
-    String rawUnit = matcher.group(2).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
-    String rawName = matcher.group(3).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:132: warning: (unboxing.of.nullable) $$ 1 $$ fractionLookup.get(usedFraction) $$ ( 3682, 3714 ) $$ unboxing a possibly-null reference fractionLookup.get(usedFraction)
-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
-                                                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 550, 568 ) $$ call to setupLookupTable() not allowed on the given receiver.
-    setupLookupTable();
-                    ^
-  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
-  required: @Initialized @NonNull IngredientUnitLookup
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:56: warning: (dereference.of.nullable) $$ 1 $$ byShorthand $$ ( 1530, 1541 ) $$ dereference of possibly-null reference byShorthand
-    IngredientUnit result = byShorthand.get(shorthand);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:72: warning: (dereference.of.nullable) $$ 1 $$ byPlural $$ ( 1902, 1910 ) $$ dereference of possibly-null reference byPlural
-    IngredientUnit result = byPlural.get(plural);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:109: warning: (dereference.of.nullable) $$ 1 $$ bySingular $$ ( 2873, 2883 ) $$ dereference of possibly-null reference bySingular
-    IngredientUnit result = bySingular.get(search);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeFetcherService.java:12: warning: (argument) $$ 4 $$ url $$ Jsoup.connect $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 322, 325 ) $$ incompatible argument for parameter url of Jsoup.connect.
-    return Jsoup.connect(url).get().html();
-                         ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:50: warning: (type.arguments.not.inferred) $$ 2 $$ ResponseEntity.ok $$ @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board> $$ ( 1962, 1987 ) $$ Could not infer type arguments for ResponseEntity.ok
-    return ResponseEntity.ok(boards);
-                            ^
-  unsatisfiable constraint: @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:64: warning: (iterating.over.nullable) $$ 1 $$ boards $$ ( 2448, 2454 ) $$ iterating over possibly-null reference boards
-    for (Board board : boards) {
-                       ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:73: warning: (dereference.of.nullable) $$ 1 $$ recipe.getSource() $$ ( 2804, 2822 ) $$ dereference of possibly-null reference recipe.getSource()
-          if (recipe.getSource().isEmpty()) {
-                              ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
-          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
-                                                                      ^
-Note: ../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-20 warnings
-entering iteration 1
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java:11: warning: (initialization.field.uninitialized) $$ 1 $$ board $$ ( 230, 250 ) $$ the default constructor does not initialize field board
-  private Board board;
-                ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java:13: warning: (initialization.field.uninitialized) $$ 1 $$ pins $$ ( 254, 277 ) $$ the default constructor does not initialize field pins
-  private List<Pin> pins;
-                    ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:8: warning: (initialization.field.uninitialized) $$ 1 $$ id $$ ( 113, 131 ) $$ the default constructor does not initialize field id
-  private String id;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:10: warning: (initialization.field.uninitialized) $$ 1 $$ name $$ ( 135, 155 ) $$ the default constructor does not initialize field name
-  private String name;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:12: warning: (initialization.field.uninitialized) $$ 1 $$ url $$ ( 159, 178 ) $$ the default constructor does not initialize field url
-  private String url;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:39: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Board $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Board this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 540, 548 ) $$ Incompatible parameter type for o.
-  public boolean equals(Object o) {
-                               ^
-  found   : @Initialized @NonNull Object
-  required: @Initialized @Nullable Object
-  Consequence: method in @Initialized @NonNull Board
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Board this, @Initialized @NonNull Object p0)
-  cannot override method in @Initialized @NonNull Object
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:43: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getId $$ ( 702, 709 ) $$ call to non-deterministic side-effecting getId not allowed in deterministic side-effect-free method
-    return Objects.equals(getId(), board.getId())
-                               ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:43: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ board.getId $$ ( 711, 724 ) $$ call to non-deterministic side-effecting board.getId not allowed in deterministic side-effect-free method
-    return Objects.equals(getId(), board.getId())
-                                              ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getName $$ ( 752, 761 ) $$ call to non-deterministic side-effecting getName not allowed in deterministic side-effect-free method
-        && Objects.equals(getName(), board.getName())
-                                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ board.getName $$ ( 763, 778 ) $$ call to non-deterministic side-effecting board.getName not allowed in deterministic side-effect-free method
-        && Objects.equals(getName(), board.getName())
-                                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:45: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getUrl $$ ( 806, 814 ) $$ call to non-deterministic side-effecting getUrl not allowed in deterministic side-effect-free method
-        && Objects.equals(getUrl(), board.getUrl());
-                                ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:45: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ board.getUrl $$ ( 816, 830 ) $$ call to non-deterministic side-effecting board.getUrl not allowed in deterministic side-effect-free method
-        && Objects.equals(getUrl(), board.getUrl());
-                                                ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:50: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getId $$ ( 900, 907 ) $$ call to non-deterministic side-effecting getId not allowed in deterministic side-effect-free method
-    return Objects.hash(getId(), getName(), getUrl());
-                             ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:50: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getName $$ ( 909, 918 ) $$ call to non-deterministic side-effecting getName not allowed in deterministic side-effect-free method
-    return Objects.hash(getId(), getName(), getUrl());
-                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:50: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getUrl $$ ( 920, 928 ) $$ call to non-deterministic side-effecting getUrl not allowed in deterministic side-effect-free method
-    return Objects.hash(getId(), getName(), getUrl());
-                                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:24: warning: (initialization.fields.uninitialized) $$ 1 $$ id, originalLink, note, name $$ ( 571, 586 ) $$ the constructor does not initialize fields: id, originalLink, note, name
-  public Pin() {}
-         ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:27: warning: (initialization.fields.uninitialized) $$ 1 $$ id, originalLink, note $$ ( 590, 1031 ) $$ the constructor does not initialize fields: id, originalLink, note
-  public Pin(@JsonProperty("metadata") Map<String, Object> metadata) {
-         ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:36: warning: (dereference.of.nullable) $$ 1 $$ article $$ ( 893, 900 ) $$ dereference of possibly-null reference article
-    if (article.containsKey("name")) {
-        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:37: warning: (dereference.of.nullable) $$ 1 $$ article.get("name") $$ ( 937, 956 ) $$ dereference of possibly-null reference article.get("name")
-      name = article.get("name").toString();
-                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:62: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Pin $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Pin this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1333, 1341 ) $$ Incompatible parameter type for o.
-  public boolean equals(Object o) {
-                               ^
-  found   : @Initialized @NonNull Object
-  required: @Initialized @Nullable Object
-  Consequence: method in @Initialized @NonNull Pin
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Pin this, @Initialized @NonNull Object p0)
-  cannot override method in @Initialized @NonNull Object
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:66: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getId $$ ( 1489, 1496 ) $$ call to non-deterministic side-effecting getId not allowed in deterministic side-effect-free method
-    return Objects.equals(getId(), pin.getId())
-                               ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:66: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ pin.getId $$ ( 1498, 1509 ) $$ call to non-deterministic side-effecting pin.getId not allowed in deterministic side-effect-free method
-    return Objects.equals(getId(), pin.getId())
-                                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:67: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getOriginalLink $$ ( 1537, 1554 ) $$ call to non-deterministic side-effecting getOriginalLink not allowed in deterministic side-effect-free method
-        && Objects.equals(getOriginalLink(), pin.getOriginalLink());
-                                         ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:67: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ pin.getOriginalLink $$ ( 1556, 1577 ) $$ call to non-deterministic side-effecting pin.getOriginalLink not allowed in deterministic side-effect-free method
-        && Objects.equals(getOriginalLink(), pin.getOriginalLink());
-                                                                ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:72: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getId $$ ( 1647, 1654 ) $$ call to non-deterministic side-effecting getId not allowed in deterministic side-effect-free method
-    return Objects.hash(getId(), getOriginalLink());
-                             ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:72: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getOriginalLink $$ ( 1656, 1673 ) $$ call to non-deterministic side-effecting getOriginalLink not allowed in deterministic side-effect-free method
-    return Objects.hash(getId(), getOriginalLink());
-                                                ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardList.java:10: warning: (initialization.field.uninitialized) $$ 1 $$ boards $$ ( 228, 287 ) $$ the default constructor does not initialize field boards
-  private List<Board> boards;
-                      ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java:12: warning: (initialization.field.uninitialized) $$ 1 $$ pins $$ ( 272, 327 ) $$ the default constructor does not initialize field pins
-  private List<Pin> pins;
-                    ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java:15: warning: (initialization.field.uninitialized) $$ 1 $$ page $$ ( 331, 394 ) $$ the default constructor does not initialize field page
-  private PagingInformation page;
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PagingInformation.java:9: warning: (initialization.field.uninitialized) $$ 1 $$ cursor $$ ( 205, 227 ) $$ the default constructor does not initialize field cursor
-  private String cursor;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PagingInformation.java:11: warning: (initialization.field.uninitialized) $$ 1 $$ next $$ ( 231, 251 ) $$ the default constructor does not initialize field next
-  private String next;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardRequest.java:12: warning: (initialization.field.uninitialized) $$ 1 $$ board $$ ( 261, 313 ) $$ the default constructor does not initialize field board
-  private Board board;
-                ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:20: warning: (initialization.field.uninitialized) $$ 1 $$ clientId $$ ( 889, 957 ) $$ the default constructor does not initialize field clientId
-  private String clientId;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:23: warning: (initialization.field.uninitialized) $$ 1 $$ clientSecret $$ ( 961, 1037 ) $$ the default constructor does not initialize field clientSecret
-  private String clientSecret;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:26: warning: (initialization.field.uninitialized) $$ 1 $$ accessTokenUri $$ ( 1041, 1121 ) $$ the default constructor does not initialize field accessTokenUri
-  private String accessTokenUri;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:29: warning: (initialization.field.uninitialized) $$ 1 $$ authorizationUri $$ ( 1125, 1209 ) $$ the default constructor does not initialize field authorizationUri
-  private String authorizationUri;
-                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:33: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Ingredient $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Ingredient this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 555, 563 ) $$ Incompatible parameter type for o.
-  public boolean equals(Object o) {
-                               ^
-  found   : @Initialized @NonNull Object
-  required: @Initialized @Nullable Object
-  Consequence: method in @Initialized @NonNull Ingredient
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Ingredient this, @Initialized @NonNull Object p0)
-  cannot override method in @Initialized @NonNull Object
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:37: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ that.getAmount $$ ( 725, 741 ) $$ call to non-deterministic side-effecting that.getAmount not allowed in deterministic side-effect-free method
-    return Float.compare(that.getAmount(), getAmount()) == 0
-                                       ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:37: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getAmount $$ ( 743, 754 ) $$ call to non-deterministic side-effecting getAmount not allowed in deterministic side-effect-free method
-    return Float.compare(that.getAmount(), getAmount()) == 0
-                                                    ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:38: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getUnit $$ ( 772, 781 ) $$ call to non-deterministic side-effecting getUnit not allowed in deterministic side-effect-free method
-        && getUnit() == that.getUnit()
-                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:38: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ that.getUnit $$ ( 785, 799 ) $$ call to non-deterministic side-effecting that.getUnit not allowed in deterministic side-effect-free method
-        && getUnit() == that.getUnit()
-                                    ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:39: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getType $$ ( 826, 835 ) $$ call to non-deterministic side-effecting getType not allowed in deterministic side-effect-free method
-        && Objects.equals(getType(), that.getType());
-                                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:39: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ that.getType $$ ( 837, 851 ) $$ call to non-deterministic side-effecting that.getType not allowed in deterministic side-effect-free method
-        && Objects.equals(getType(), that.getType());
-                                                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getUnit $$ ( 921, 930 ) $$ call to non-deterministic side-effecting getUnit not allowed in deterministic side-effect-free method
-    return Objects.hash(getUnit(), getType(), getAmount());
-                               ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getType $$ ( 932, 941 ) $$ call to non-deterministic side-effecting getType not allowed in deterministic side-effect-free method
-    return Objects.hash(getUnit(), getType(), getAmount());
-                                          ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getAmount $$ ( 943, 954 ) $$ call to non-deterministic side-effecting getAmount not allowed in deterministic side-effect-free method
-    return Objects.hash(getUnit(), getType(), getAmount());
-                                                       ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:25: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Recipe $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Recipe this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 610, 618 ) $$ Incompatible parameter type for o.
-  public boolean equals(Object o) {
-                               ^
-  found   : @Initialized @NonNull Object
-  required: @Initialized @Nullable Object
-  Consequence: method in @Initialized @NonNull Recipe
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Recipe this, @Initialized @NonNull Object p0)
-  cannot override method in @Initialized @NonNull Object
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:29: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getName $$ ( 775, 784 ) $$ call to non-deterministic side-effecting getName not allowed in deterministic side-effect-free method
-    return Objects.equals(getName(), recipe.getName())
-                                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:29: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ recipe.getName $$ ( 786, 802 ) $$ call to non-deterministic side-effecting recipe.getName not allowed in deterministic side-effect-free method
-    return Objects.equals(getName(), recipe.getName())
-                                                   ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:30: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getIngredients $$ ( 830, 846 ) $$ call to non-deterministic side-effecting getIngredients not allowed in deterministic side-effect-free method
-        && Objects.equals(getIngredients(), recipe.getIngredients())
-                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:30: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ recipe.getIngredients $$ ( 848, 871 ) $$ call to non-deterministic side-effecting recipe.getIngredients not allowed in deterministic side-effect-free method
-        && Objects.equals(getIngredients(), recipe.getIngredients())
-                                                                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:31: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getSource $$ ( 899, 910 ) $$ call to non-deterministic side-effecting getSource not allowed in deterministic side-effect-free method
-        && Objects.equals(getSource(), recipe.getSource());
-                                   ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:31: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ recipe.getSource $$ ( 912, 930 ) $$ call to non-deterministic side-effecting recipe.getSource not allowed in deterministic side-effect-free method
-        && Objects.equals(getSource(), recipe.getSource());
-                                                       ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:36: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getName $$ ( 1000, 1009 ) $$ call to non-deterministic side-effecting getName not allowed in deterministic side-effect-free method
-    return Objects.hash(getName(), getIngredients(), getSource());
-                               ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:36: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getIngredients $$ ( 1011, 1027 ) $$ call to non-deterministic side-effecting getIngredients not allowed in deterministic side-effect-free method
-    return Objects.hash(getName(), getIngredients(), getSource());
-                                                 ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:36: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getSource $$ ( 1029, 1040 ) $$ call to non-deterministic side-effecting getSource not allowed in deterministic side-effect-free method
-    return Objects.hash(getName(), getIngredients(), getSource());
-                                                              ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
-    String rawUnit = matcher.group(2).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
-    String rawName = matcher.group(3).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:132: warning: (unboxing.of.nullable) $$ 1 $$ fractionLookup.get(usedFraction) $$ ( 3682, 3714 ) $$ unboxing a possibly-null reference fractionLookup.get(usedFraction)
-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
-                                                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:12: warning: (initialization.static.field.uninitialized) $$ 1 $$ instance $$ ( 255, 300 ) $$ static field instance not initialized
-  private static IngredientUnitLookup instance;
-                                      ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:19: warning: (initialization.fields.uninitialized) $$ 1 $$ byShorthand, byPlural, bySingular $$ ( 513, 573 ) $$ the constructor does not initialize fields: byShorthand, byPlural, bySingular
-  private IngredientUnitLookup() {
-          ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 550, 568 ) $$ call to setupLookupTable() not allowed on the given receiver.
-    setupLookupTable();
-                    ^
-  found   : @UnderInitialization @NonNull IngredientUnitLookup
-  required: @Initialized @NonNull IngredientUnitLookup
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgFormatDetector.java:56: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull SchemaOrgFormatDetector $$ @Initialized @NonNull boolean equals(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1689, 1697 ) $$ Incompatible parameter type for o.
-  public boolean equals(Object o) {
-                               ^
-  found   : @Initialized @NonNull Object
-  required: @Initialized @Nullable Object
-  Consequence: method in @Initialized @NonNull SchemaOrgFormatDetector
-    @Initialized @NonNull boolean equals(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull Object p0)
-  cannot override method in @Initialized @NonNull Object
-    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
-          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
-                                                                      ^
-Note: ../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-64 warnings
-realpath: iteration1.diff: No such file or directory
-putting the diff for iteration 1 into 
-ending iteration 1, time taken: 4 seconds
-
-entering iteration 2
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/AbstractReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Package not found: org.spacious_team.table_wrapper.api
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/AbstractReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Type not found: org.spacious_team.table_wrapper.api.AbstractReportPage
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/AbstractReportPageRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Type not found: org.spacious_team.table_wrapper.api.AbstractReportPageRow
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/AbstractTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: org.spacious_team.table_wrapper.api.AbstractTable
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/AbstractTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Type not found: org.spacious_team.table_wrapper.api.AbstractTableCell
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/AbstractTableFactory-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Type not found: org.spacious_team.table_wrapper.api.AbstractTableFactory
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/AnyOfTableColumn-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Type not found: org.spacious_team.table_wrapper.api.AnyOfTableColumn
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/CellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: org.spacious_team.table_wrapper.api.CellDataAccessObject
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/ConstantPositionTableColumn-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Type not found: org.spacious_team.table_wrapper.api.ConstantPositionTableColumn
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/MultiLineTableColumn-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: org.spacious_team.table_wrapper.api.MultiLineTableColumn
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/MutableTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: org.spacious_team.table_wrapper.api.MutableTableRow
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/OptionalTableColumn-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Type not found: org.spacious_team.table_wrapper.api.OptionalTableColumn
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/RelativePositionTableColumn-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Type not found: org.spacious_team.table_wrapper.api.RelativePositionTableColumn
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/ReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Enclosing type of static field getCellStringValueIgnoreCasePrefixPredicate not found: org.spacious_team.table_wrapper.api.ReportPageHelper
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/ReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Type not found: org.spacious_team.table_wrapper.api.ReportPage
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/ReportPageHelper-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Type not found: org.spacious_team.table_wrapper.api.ReportPageHelper
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/ReportPageRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Type not found: org.spacious_team.table_wrapper.api.ReportPageRow
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/Table-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: org.spacious_team.table_wrapper.api.Table
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Type not found: org.spacious_team.table_wrapper.api.TableCell
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableCellAddress-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Type not found: org.spacious_team.table_wrapper.api.TableCellAddress
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableCellRange-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Type not found: org.spacious_team.table_wrapper.api.TableCellRange
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableColumn-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Type not found: org.spacious_team.table_wrapper.api.TableColumn
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableColumnDescription-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Type not found: org.spacious_team.table_wrapper.api.TableColumnDescription
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableColumnImpl-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Type not found: org.spacious_team.table_wrapper.api.TableColumnImpl
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableFactory-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Type not found: org.spacious_team.table_wrapper.api.TableFactory
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableFactoryRegistry-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Type not found: org.spacious_team.table_wrapper.api.TableFactoryRegistry
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_mealPlanner/wpi-out/org/spacious_team/table_wrapper/api/TableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Type not found: org.spacious_team.table_wrapper.api.TableRow
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java:16: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull Board $$ @Initialized @NonNull Board $$ ( 318, 323 ) $$ incompatible types in return.
-    return board;
-           ^
-  type of expression: @Initialized @MonotonicNonNull Board
-  method return type: @Initialized @NonNull Board
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java:24: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull List<@Initialized @NonNull Pin> $$ @Initialized @NonNull List<@Initialized @NonNull Pin> $$ ( 439, 443 ) $$ incompatible types in return.
-    return pins;
-           ^
-  type of expression: @Initialized @MonotonicNonNull List<@Initialized @NonNull Pin>
-  method return type: @Initialized @NonNull List<@Initialized @NonNull Pin>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:15: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 217, 219 ) $$ incompatible types in return.
-    return id;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:23: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 321, 325 ) $$ incompatible types in return.
-    return name;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:31: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 434, 437 ) $$ incompatible types in return.
-    return url;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:36: warning: (dereference.of.nullable) $$ 1 $$ article $$ ( 893, 900 ) $$ dereference of possibly-null reference article
-    if (article.containsKey("name")) {
-        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:37: warning: (dereference.of.nullable) $$ 1 $$ article.get("name") $$ ( 937, 956 ) $$ dereference of possibly-null reference article.get("name")
-      name = article.get("name").toString();
-                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:46: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1070, 1072 ) $$ incompatible types in return.
-    return id;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:54: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1182, 1194 ) $$ incompatible types in return.
-    return originalLink;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:81: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1855, 1859 ) $$ incompatible types in return.
-    return note;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:89: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1969, 1973 ) $$ incompatible types in return.
-    return name;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardList.java:13: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull List<@Initialized @NonNull Board> $$ @Initialized @NonNull List<@Initialized @NonNull Board> $$ ( 335, 341 ) $$ incompatible types in return.
-    return boards;
-           ^
-  type of expression: @Initialized @MonotonicNonNull List<@Initialized @NonNull Board>
-  method return type: @Initialized @NonNull List<@Initialized @NonNull Board>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java:18: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull List<@Initialized @NonNull Pin> $$ @Initialized @NonNull List<@Initialized @NonNull Pin> $$ ( 438, 442 ) $$ incompatible types in return.
-    return pins;
-           ^
-  type of expression: @Initialized @MonotonicNonNull List<@Initialized @NonNull Pin>
-  method return type: @Initialized @NonNull List<@Initialized @NonNull Pin>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java:26: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull PagingInformation $$ @Initialized @NonNull PagingInformation $$ ( 566, 570 ) $$ incompatible types in return.
-    return page;
-           ^
-  type of expression: @Initialized @MonotonicNonNull PagingInformation
-  method return type: @Initialized @NonNull PagingInformation
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PagingInformation.java:14: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 294, 300 ) $$ incompatible types in return.
-    return cursor;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PagingInformation.java:22: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 418, 422 ) $$ incompatible types in return.
-    return next;
-           ^
-  type of expression: @Initialized @MonotonicNonNull String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardRequest.java:15: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull Board $$ @Initialized @NonNull Board $$ ( 354, 359 ) $$ incompatible types in return.
-    return board;
-           ^
-  type of expression: @Initialized @MonotonicNonNull Board
-  method return type: @Initialized @NonNull Board
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:39: warning: (argument) $$ 4 $$ clientId $$ BaseOAuth2ProtectedResourceDetails.setClientId $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1517, 1525 ) $$ incompatible argument for parameter clientId of BaseOAuth2ProtectedResourceDetails.setClientId.
-    resourceDetails.setClientId(clientId);
-                                ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:40: warning: (argument) $$ 4 $$ clientSecret $$ BaseOAuth2ProtectedResourceDetails.setClientSecret $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1564, 1576 ) $$ incompatible argument for parameter clientSecret of BaseOAuth2ProtectedResourceDetails.setClientSecret.
-    resourceDetails.setClientSecret(clientSecret);
-                                    ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:41: warning: (argument) $$ 4 $$ accessTokenUri $$ BaseOAuth2ProtectedResourceDetails.setAccessTokenUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1617, 1631 ) $$ incompatible argument for parameter accessTokenUri of BaseOAuth2ProtectedResourceDetails.setAccessTokenUri.
-    resourceDetails.setAccessTokenUri(accessTokenUri);
-                                      ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:42: warning: (argument) $$ 4 $$ userAuthorizationUri $$ AbstractRedirectResourceDetails.setUserAuthorizationUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1678, 1694 ) $$ incompatible argument for parameter userAuthorizationUri of AbstractRedirectResourceDetails.setUserAuthorizationUri.
-    resourceDetails.setUserAuthorizationUri(authorizationUri);
-                                            ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
-    String rawUnit = matcher.group(2).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
-    String rawName = matcher.group(3).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:132: warning: (unboxing.of.nullable) $$ 1 $$ fractionLookup.get(usedFraction) $$ ( 3682, 3714 ) $$ unboxing a possibly-null reference fractionLookup.get(usedFraction)
-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
-                                                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 550, 568 ) $$ call to setupLookupTable() not allowed on the given receiver.
-    setupLookupTable();
-                    ^
-  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
-  required: @Initialized @NonNull IngredientUnitLookup
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:56: warning: (dereference.of.nullable) $$ 1 $$ byShorthand $$ ( 1530, 1541 ) $$ dereference of possibly-null reference byShorthand
-    IngredientUnit result = byShorthand.get(shorthand);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:72: warning: (dereference.of.nullable) $$ 1 $$ byPlural $$ ( 1902, 1910 ) $$ dereference of possibly-null reference byPlural
-    IngredientUnit result = byPlural.get(plural);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:109: warning: (dereference.of.nullable) $$ 1 $$ bySingular $$ ( 2873, 2883 ) $$ dereference of possibly-null reference bySingular
-    IngredientUnit result = bySingular.get(search);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
-          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
-                                                                      ^
-Note: ../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-56 warnings
-realpath: iteration2.diff: No such file or directory
-putting the diff for iteration 2 into 
-ending iteration 2, time taken: 3 seconds
-
-entering iteration 3
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:36: warning: (dereference.of.nullable) $$ 1 $$ article $$ ( 893, 900 ) $$ dereference of possibly-null reference article
-    if (article.containsKey("name")) {
-        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:37: warning: (dereference.of.nullable) $$ 1 $$ article.get("name") $$ ( 937, 956 ) $$ dereference of possibly-null reference article.get("name")
-      name = article.get("name").toString();
-                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:39: warning: (argument) $$ 4 $$ clientId $$ BaseOAuth2ProtectedResourceDetails.setClientId $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1517, 1525 ) $$ incompatible argument for parameter clientId of BaseOAuth2ProtectedResourceDetails.setClientId.
-    resourceDetails.setClientId(clientId);
-                                ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:40: warning: (argument) $$ 4 $$ clientSecret $$ BaseOAuth2ProtectedResourceDetails.setClientSecret $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1564, 1576 ) $$ incompatible argument for parameter clientSecret of BaseOAuth2ProtectedResourceDetails.setClientSecret.
-    resourceDetails.setClientSecret(clientSecret);
-                                    ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:41: warning: (argument) $$ 4 $$ accessTokenUri $$ BaseOAuth2ProtectedResourceDetails.setAccessTokenUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1617, 1631 ) $$ incompatible argument for parameter accessTokenUri of BaseOAuth2ProtectedResourceDetails.setAccessTokenUri.
-    resourceDetails.setAccessTokenUri(accessTokenUri);
-                                      ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:42: warning: (argument) $$ 4 $$ userAuthorizationUri $$ AbstractRedirectResourceDetails.setUserAuthorizationUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1678, 1694 ) $$ incompatible argument for parameter userAuthorizationUri of AbstractRedirectResourceDetails.setUserAuthorizationUri.
-    resourceDetails.setUserAuthorizationUri(authorizationUri);
-                                            ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:39: warning: (return) $$ 2 $$ @Initialized @Nullable List<@Initialized @NonNull Board> $$ @Initialized @NonNull List<@Initialized @NonNull Board> $$ ( 1456, 1484 ) $$ incompatible types in return.
-      return boards.getBody().getBoards();
-                                       ^
-  type of expression: @Initialized @Nullable List<@Initialized @NonNull Board>
-  method return type: @Initialized @NonNull List<@Initialized @NonNull Board>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:64: warning: (argument) $$ 4 $$ arg0 $$ List.addAll $$ @Initialized @Nullable List<@Initialized @NonNull Pin> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin> $$ ( 2197, 2225 ) $$ incompatible argument for parameter arg0 of List.addAll.
-      result.addAll(response.getBody().getPins());
-                                              ^
-  found   : @Initialized @Nullable List<@Initialized @NonNull Pin>
-  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:82: warning: (argument) $$ 4 $$ board $$ BoardListing.setBoard $$ @Initialized @Nullable Board $$ @Initialized @NonNull Board $$ ( 2720, 2746 ) $$ incompatible argument for parameter board of BoardListing.setBoard.
-    result.setBoard(board.getBody().getBoard());
-                                            ^
-  found   : @Initialized @Nullable Board
-  required: @Initialized @NonNull Board
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
-    String rawUnit = matcher.group(2).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
-    String rawName = matcher.group(3).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:132: warning: (unboxing.of.nullable) $$ 1 $$ fractionLookup.get(usedFraction) $$ ( 3682, 3714 ) $$ unboxing a possibly-null reference fractionLookup.get(usedFraction)
-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
-                                                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 550, 568 ) $$ call to setupLookupTable() not allowed on the given receiver.
-    setupLookupTable();
-                    ^
-  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
-  required: @Initialized @NonNull IngredientUnitLookup
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:56: warning: (dereference.of.nullable) $$ 1 $$ byShorthand $$ ( 1530, 1541 ) $$ dereference of possibly-null reference byShorthand
-    IngredientUnit result = byShorthand.get(shorthand);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:72: warning: (dereference.of.nullable) $$ 1 $$ byPlural $$ ( 1902, 1910 ) $$ dereference of possibly-null reference byPlural
-    IngredientUnit result = byPlural.get(plural);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:109: warning: (dereference.of.nullable) $$ 1 $$ bySingular $$ ( 2873, 2883 ) $$ dereference of possibly-null reference bySingular
-    IngredientUnit result = bySingular.get(search);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:66: warning: (argument) $$ 4 $$ boardId $$ IBoardService.getPins $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2572, 2585 ) $$ incompatible argument for parameter boardId of IBoardService.getPins.
-      List<Pin> pins = service.getPins(board.getId());
-                                                  ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:71: warning: (argument) $$ 4 $$ url $$ RecipeService.fromURL $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2765, 2786 ) $$ incompatible argument for parameter url of RecipeService.fromURL.
-          Recipe recipe = recipeService.fromURL(pin.getOriginalLink());
-                                                                   ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
-          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
-                                                                      ^
-Note: ../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-19 warnings
-realpath: iteration3.diff: No such file or directory
-putting the diff for iteration 3 into 
-ending iteration 3, time taken: 4 seconds
-
-entering iteration 4
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java:20: warning: (assignment) $$ 2 $$ @Initialized @Nullable Board $$ @Initialized @MonotonicNonNull Board $$ ( 385, 390 ) $$ incompatible types in assignment.
-    this.board = board;
-                 ^
-  found   : @Initialized @Nullable Board
-  required: @Initialized @MonotonicNonNull Board
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:36: warning: (dereference.of.nullable) $$ 1 $$ article $$ ( 893, 900 ) $$ dereference of possibly-null reference article
-    if (article.containsKey("name")) {
-        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:37: warning: (dereference.of.nullable) $$ 1 $$ article.get("name") $$ ( 937, 956 ) $$ dereference of possibly-null reference article.get("name")
-      name = article.get("name").toString();
-                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:39: warning: (argument) $$ 4 $$ clientId $$ BaseOAuth2ProtectedResourceDetails.setClientId $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1517, 1525 ) $$ incompatible argument for parameter clientId of BaseOAuth2ProtectedResourceDetails.setClientId.
-    resourceDetails.setClientId(clientId);
-                                ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:40: warning: (argument) $$ 4 $$ clientSecret $$ BaseOAuth2ProtectedResourceDetails.setClientSecret $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1564, 1576 ) $$ incompatible argument for parameter clientSecret of BaseOAuth2ProtectedResourceDetails.setClientSecret.
-    resourceDetails.setClientSecret(clientSecret);
-                                    ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:41: warning: (argument) $$ 4 $$ accessTokenUri $$ BaseOAuth2ProtectedResourceDetails.setAccessTokenUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1617, 1631 ) $$ incompatible argument for parameter accessTokenUri of BaseOAuth2ProtectedResourceDetails.setAccessTokenUri.
-    resourceDetails.setAccessTokenUri(accessTokenUri);
-                                      ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:42: warning: (argument) $$ 4 $$ userAuthorizationUri $$ AbstractRedirectResourceDetails.setUserAuthorizationUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1678, 1694 ) $$ incompatible argument for parameter userAuthorizationUri of AbstractRedirectResourceDetails.setUserAuthorizationUri.
-    resourceDetails.setUserAuthorizationUri(authorizationUri);
-                                            ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:48: warning: (override.param) $$ 7 $$ boardId $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull BoardService $$ @Initialized @NonNull List<@Initialized @NonNull Pin> getPins(@Initialized @NonNull BoardService this, @Initialized @NonNull String p0) $$ @Initialized @NonNull IBoardService $$ @Initialized @NonNull List<@Initialized @NonNull Pin> getPins(@Initialized @NonNull IBoardService this, @Initialized @Nullable String p0) $$ ( 1660, 1674 ) $$ Incompatible parameter type for boardId.
-  public List<Pin> getPins(String boardId) {
-                                  ^
-  found   : @Initialized @NonNull String
-  required: @Initialized @Nullable String
-  Consequence: method in @Initialized @NonNull BoardService
-    @Initialized @NonNull List<@Initialized @NonNull Pin> getPins(@Initialized @NonNull BoardService this, @Initialized @NonNull String p0)
-  cannot override method in @Initialized @NonNull IBoardService
-    @Initialized @NonNull List<@Initialized @NonNull Pin> getPins(@Initialized @NonNull IBoardService this, @Initialized @Nullable String p0)
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:64: warning: (argument) $$ 4 $$ arg0 $$ List.addAll $$ @Initialized @Nullable List<@Initialized @NonNull Pin> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin> $$ ( 2197, 2225 ) $$ incompatible argument for parameter arg0 of List.addAll.
-      result.addAll(response.getBody().getPins());
-                                              ^
-  found   : @Initialized @Nullable List<@Initialized @NonNull Pin>
-  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
-    String rawUnit = matcher.group(2).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
-    String rawName = matcher.group(3).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:132: warning: (unboxing.of.nullable) $$ 1 $$ fractionLookup.get(usedFraction) $$ ( 3682, 3714 ) $$ unboxing a possibly-null reference fractionLookup.get(usedFraction)
-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
-                                                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 550, 568 ) $$ call to setupLookupTable() not allowed on the given receiver.
-    setupLookupTable();
-                    ^
-  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
-  required: @Initialized @NonNull IngredientUnitLookup
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:56: warning: (dereference.of.nullable) $$ 1 $$ byShorthand $$ ( 1530, 1541 ) $$ dereference of possibly-null reference byShorthand
-    IngredientUnit result = byShorthand.get(shorthand);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:72: warning: (dereference.of.nullable) $$ 1 $$ byPlural $$ ( 1902, 1910 ) $$ dereference of possibly-null reference byPlural
-    IngredientUnit result = byPlural.get(plural);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:109: warning: (dereference.of.nullable) $$ 1 $$ bySingular $$ ( 2873, 2883 ) $$ dereference of possibly-null reference bySingular
-    IngredientUnit result = bySingular.get(search);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeService.java:30: warning: (argument) $$ 4 $$ url $$ RecipeFetcherService.fetchByURL $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 894, 897 ) $$ incompatible argument for parameter url of RecipeFetcherService.fetchByURL.
-      recipeSource = fetcherService.fetchByURL(url);
-                                               ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:50: warning: (type.arguments.not.inferred) $$ 2 $$ ResponseEntity.ok $$ @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board> $$ ( 1962, 1987 ) $$ Could not infer type arguments for ResponseEntity.ok
-    return ResponseEntity.ok(boards);
-                            ^
-  unsatisfiable constraint: @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:64: warning: (iterating.over.nullable) $$ 1 $$ boards $$ ( 2448, 2454 ) $$ iterating over possibly-null reference boards
-    for (Board board : boards) {
-                       ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:74: warning: (argument) $$ 4 $$ source $$ Recipe.setSource $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2865, 2886 ) $$ incompatible argument for parameter source of Recipe.setSource.
-            recipe.setSource(pin.getOriginalLink());
-                                                ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
-          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
-                                                                      ^
-Note: ../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-21 warnings
-realpath: iteration4.diff: No such file or directory
-putting the diff for iteration 4 into 
-ending iteration 4, time taken: 3 seconds
-
-entering iteration 5
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:36: warning: (dereference.of.nullable) $$ 1 $$ article $$ ( 893, 900 ) $$ dereference of possibly-null reference article
-    if (article.containsKey("name")) {
-        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:37: warning: (dereference.of.nullable) $$ 1 $$ article.get("name") $$ ( 937, 956 ) $$ dereference of possibly-null reference article.get("name")
-      name = article.get("name").toString();
-                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:39: warning: (argument) $$ 4 $$ clientId $$ BaseOAuth2ProtectedResourceDetails.setClientId $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1517, 1525 ) $$ incompatible argument for parameter clientId of BaseOAuth2ProtectedResourceDetails.setClientId.
-    resourceDetails.setClientId(clientId);
-                                ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:40: warning: (argument) $$ 4 $$ clientSecret $$ BaseOAuth2ProtectedResourceDetails.setClientSecret $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1564, 1576 ) $$ incompatible argument for parameter clientSecret of BaseOAuth2ProtectedResourceDetails.setClientSecret.
-    resourceDetails.setClientSecret(clientSecret);
-                                    ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:41: warning: (argument) $$ 4 $$ accessTokenUri $$ BaseOAuth2ProtectedResourceDetails.setAccessTokenUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1617, 1631 ) $$ incompatible argument for parameter accessTokenUri of BaseOAuth2ProtectedResourceDetails.setAccessTokenUri.
-    resourceDetails.setAccessTokenUri(accessTokenUri);
-                                      ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:42: warning: (argument) $$ 4 $$ userAuthorizationUri $$ AbstractRedirectResourceDetails.setUserAuthorizationUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1678, 1694 ) $$ incompatible argument for parameter userAuthorizationUri of AbstractRedirectResourceDetails.setUserAuthorizationUri.
-    resourceDetails.setUserAuthorizationUri(authorizationUri);
-                                            ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:55: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1891, 1898 ) $$ incompatible argument for parameter arg1 of Map.put.
-      requestParameter.put("id", boardId);
-                                 ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:64: warning: (argument) $$ 4 $$ arg0 $$ List.addAll $$ @Initialized @Nullable List<@Initialized @NonNull Pin> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin> $$ ( 2197, 2225 ) $$ incompatible argument for parameter arg0 of List.addAll.
-      result.addAll(response.getBody().getPins());
-                                              ^
-  found   : @Initialized @Nullable List<@Initialized @NonNull Pin>
-  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:60: warning: (assignment) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1451, 1457 ) $$ incompatible types in assignment.
-    this.source = source;
-                  ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
-    String rawUnit = matcher.group(2).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
-    String rawName = matcher.group(3).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:132: warning: (unboxing.of.nullable) $$ 1 $$ fractionLookup.get(usedFraction) $$ ( 3682, 3714 ) $$ unboxing a possibly-null reference fractionLookup.get(usedFraction)
-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
-                                                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 550, 568 ) $$ call to setupLookupTable() not allowed on the given receiver.
-    setupLookupTable();
-                    ^
-  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
-  required: @Initialized @NonNull IngredientUnitLookup
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:56: warning: (dereference.of.nullable) $$ 1 $$ byShorthand $$ ( 1530, 1541 ) $$ dereference of possibly-null reference byShorthand
-    IngredientUnit result = byShorthand.get(shorthand);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:72: warning: (dereference.of.nullable) $$ 1 $$ byPlural $$ ( 1902, 1910 ) $$ dereference of possibly-null reference byPlural
-    IngredientUnit result = byPlural.get(plural);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:109: warning: (dereference.of.nullable) $$ 1 $$ bySingular $$ ( 2873, 2883 ) $$ dereference of possibly-null reference bySingular
-    IngredientUnit result = bySingular.get(search);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeFetcherService.java:12: warning: (argument) $$ 4 $$ url $$ Jsoup.connect $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 322, 325 ) $$ incompatible argument for parameter url of Jsoup.connect.
-    return Jsoup.connect(url).get().html();
-                         ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:50: warning: (type.arguments.not.inferred) $$ 2 $$ ResponseEntity.ok $$ @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board> $$ ( 1962, 1987 ) $$ Could not infer type arguments for ResponseEntity.ok
-    return ResponseEntity.ok(boards);
-                            ^
-  unsatisfiable constraint: @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:64: warning: (iterating.over.nullable) $$ 1 $$ boards $$ ( 2448, 2454 ) $$ iterating over possibly-null reference boards
-    for (Board board : boards) {
-                       ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
-          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
-                                                                      ^
-Note: ../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-20 warnings
-realpath: iteration5.diff: No such file or directory
-putting the diff for iteration 5 into 
-ending iteration 5, time taken: 4 seconds
-
-entering iteration 6
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:36: warning: (dereference.of.nullable) $$ 1 $$ article $$ ( 893, 900 ) $$ dereference of possibly-null reference article
-    if (article.containsKey("name")) {
-        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:37: warning: (dereference.of.nullable) $$ 1 $$ article.get("name") $$ ( 937, 956 ) $$ dereference of possibly-null reference article.get("name")
-      name = article.get("name").toString();
-                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:39: warning: (argument) $$ 4 $$ clientId $$ BaseOAuth2ProtectedResourceDetails.setClientId $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1517, 1525 ) $$ incompatible argument for parameter clientId of BaseOAuth2ProtectedResourceDetails.setClientId.
-    resourceDetails.setClientId(clientId);
-                                ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:40: warning: (argument) $$ 4 $$ clientSecret $$ BaseOAuth2ProtectedResourceDetails.setClientSecret $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1564, 1576 ) $$ incompatible argument for parameter clientSecret of BaseOAuth2ProtectedResourceDetails.setClientSecret.
-    resourceDetails.setClientSecret(clientSecret);
-                                    ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:41: warning: (argument) $$ 4 $$ accessTokenUri $$ BaseOAuth2ProtectedResourceDetails.setAccessTokenUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1617, 1631 ) $$ incompatible argument for parameter accessTokenUri of BaseOAuth2ProtectedResourceDetails.setAccessTokenUri.
-    resourceDetails.setAccessTokenUri(accessTokenUri);
-                                      ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:42: warning: (argument) $$ 4 $$ userAuthorizationUri $$ AbstractRedirectResourceDetails.setUserAuthorizationUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1678, 1694 ) $$ incompatible argument for parameter userAuthorizationUri of AbstractRedirectResourceDetails.setUserAuthorizationUri.
-    resourceDetails.setUserAuthorizationUri(authorizationUri);
-                                            ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:55: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1891, 1898 ) $$ incompatible argument for parameter arg1 of Map.put.
-      requestParameter.put("id", boardId);
-                                 ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:64: warning: (argument) $$ 4 $$ arg0 $$ List.addAll $$ @Initialized @Nullable List<@Initialized @NonNull Pin> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin> $$ ( 2197, 2225 ) $$ incompatible argument for parameter arg0 of List.addAll.
-      result.addAll(response.getBody().getPins());
-                                              ^
-  found   : @Initialized @Nullable List<@Initialized @NonNull Pin>
-  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:56: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1379, 1385 ) $$ incompatible types in return.
-    return source;
-           ^
-  type of expression: @Initialized @Nullable String
-  method return type: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
-    String rawUnit = matcher.group(2).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
-    String rawName = matcher.group(3).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:132: warning: (unboxing.of.nullable) $$ 1 $$ fractionLookup.get(usedFraction) $$ ( 3682, 3714 ) $$ unboxing a possibly-null reference fractionLookup.get(usedFraction)
-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
-                                                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 550, 568 ) $$ call to setupLookupTable() not allowed on the given receiver.
-    setupLookupTable();
-                    ^
-  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
-  required: @Initialized @NonNull IngredientUnitLookup
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:56: warning: (dereference.of.nullable) $$ 1 $$ byShorthand $$ ( 1530, 1541 ) $$ dereference of possibly-null reference byShorthand
-    IngredientUnit result = byShorthand.get(shorthand);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:72: warning: (dereference.of.nullable) $$ 1 $$ byPlural $$ ( 1902, 1910 ) $$ dereference of possibly-null reference byPlural
-    IngredientUnit result = byPlural.get(plural);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:109: warning: (dereference.of.nullable) $$ 1 $$ bySingular $$ ( 2873, 2883 ) $$ dereference of possibly-null reference bySingular
-    IngredientUnit result = bySingular.get(search);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeFetcherService.java:12: warning: (argument) $$ 4 $$ url $$ Jsoup.connect $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 322, 325 ) $$ incompatible argument for parameter url of Jsoup.connect.
-    return Jsoup.connect(url).get().html();
-                         ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:50: warning: (type.arguments.not.inferred) $$ 2 $$ ResponseEntity.ok $$ @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board> $$ ( 1962, 1987 ) $$ Could not infer type arguments for ResponseEntity.ok
-    return ResponseEntity.ok(boards);
-                            ^
-  unsatisfiable constraint: @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:64: warning: (iterating.over.nullable) $$ 1 $$ boards $$ ( 2448, 2454 ) $$ iterating over possibly-null reference boards
-    for (Board board : boards) {
-                       ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
-          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
-                                                                      ^
-Note: ../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-20 warnings
-realpath: iteration6.diff: No such file or directory
-putting the diff for iteration 6 into 
-ending iteration 6, time taken: 3 seconds
-
-entering iteration 7
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:36: warning: (dereference.of.nullable) $$ 1 $$ article $$ ( 893, 900 ) $$ dereference of possibly-null reference article
-    if (article.containsKey("name")) {
-        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:37: warning: (dereference.of.nullable) $$ 1 $$ article.get("name") $$ ( 937, 956 ) $$ dereference of possibly-null reference article.get("name")
-      name = article.get("name").toString();
-                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:39: warning: (argument) $$ 4 $$ clientId $$ BaseOAuth2ProtectedResourceDetails.setClientId $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1517, 1525 ) $$ incompatible argument for parameter clientId of BaseOAuth2ProtectedResourceDetails.setClientId.
-    resourceDetails.setClientId(clientId);
-                                ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:40: warning: (argument) $$ 4 $$ clientSecret $$ BaseOAuth2ProtectedResourceDetails.setClientSecret $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1564, 1576 ) $$ incompatible argument for parameter clientSecret of BaseOAuth2ProtectedResourceDetails.setClientSecret.
-    resourceDetails.setClientSecret(clientSecret);
-                                    ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:41: warning: (argument) $$ 4 $$ accessTokenUri $$ BaseOAuth2ProtectedResourceDetails.setAccessTokenUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1617, 1631 ) $$ incompatible argument for parameter accessTokenUri of BaseOAuth2ProtectedResourceDetails.setAccessTokenUri.
-    resourceDetails.setAccessTokenUri(accessTokenUri);
-                                      ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java:42: warning: (argument) $$ 4 $$ userAuthorizationUri $$ AbstractRedirectResourceDetails.setUserAuthorizationUri $$ @FBCBottom @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1678, 1694 ) $$ incompatible argument for parameter userAuthorizationUri of AbstractRedirectResourceDetails.setUserAuthorizationUri.
-    resourceDetails.setUserAuthorizationUri(authorizationUri);
-                                            ^
-  found   : @FBCBottom @MonotonicNonNull String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:55: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1891, 1898 ) $$ incompatible argument for parameter arg1 of Map.put.
-      requestParameter.put("id", boardId);
-                                 ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:64: warning: (argument) $$ 4 $$ arg0 $$ List.addAll $$ @Initialized @Nullable List<@Initialized @NonNull Pin> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin> $$ ( 2197, 2225 ) $$ incompatible argument for parameter arg0 of List.addAll.
-      result.addAll(response.getBody().getPins());
-                                              ^
-  found   : @Initialized @Nullable List<@Initialized @NonNull Pin>
-  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Pin>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
-    String rawUnit = matcher.group(2).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
-    String rawName = matcher.group(3).trim();
-                                  ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:132: warning: (unboxing.of.nullable) $$ 1 $$ fractionLookup.get(usedFraction) $$ ( 3682, 3714 ) $$ unboxing a possibly-null reference fractionLookup.get(usedFraction)
-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
-                                                                        ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 550, 568 ) $$ call to setupLookupTable() not allowed on the given receiver.
-    setupLookupTable();
-                    ^
-  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
-  required: @Initialized @NonNull IngredientUnitLookup
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:56: warning: (dereference.of.nullable) $$ 1 $$ byShorthand $$ ( 1530, 1541 ) $$ dereference of possibly-null reference byShorthand
-    IngredientUnit result = byShorthand.get(shorthand);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:72: warning: (dereference.of.nullable) $$ 1 $$ byPlural $$ ( 1902, 1910 ) $$ dereference of possibly-null reference byPlural
-    IngredientUnit result = byPlural.get(plural);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:109: warning: (dereference.of.nullable) $$ 1 $$ bySingular $$ ( 2873, 2883 ) $$ dereference of possibly-null reference bySingular
-    IngredientUnit result = bySingular.get(search);
-                            ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeFetcherService.java:12: warning: (argument) $$ 4 $$ url $$ Jsoup.connect $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 322, 325 ) $$ incompatible argument for parameter url of Jsoup.connect.
-    return Jsoup.connect(url).get().html();
-                         ^
-  found   : @Initialized @Nullable String
-  required: @Initialized @NonNull String
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:50: warning: (type.arguments.not.inferred) $$ 2 $$ ResponseEntity.ok $$ @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board> $$ ( 1962, 1987 ) $$ Could not infer type arguments for ResponseEntity.ok
-    return ResponseEntity.ok(boards);
-                            ^
-  unsatisfiable constraint: @Initialized @Nullable List<@Initialized @NonNull Board> <: @Initialized @NonNull List<@Initialized @NonNull Board>
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:64: warning: (iterating.over.nullable) $$ 1 $$ boards $$ ( 2448, 2454 ) $$ iterating over possibly-null reference boards
-    for (Board board : boards) {
-                       ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:73: warning: (dereference.of.nullable) $$ 1 $$ recipe.getSource() $$ ( 2804, 2822 ) $$ dereference of possibly-null reference recipe.getSource()
-          if (recipe.getSource().isEmpty()) {
-                              ^
-../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
-          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
-                                                                      ^
-Note: ../dataset/pre_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-20 warnings
-realpath: iteration7.diff: No such file or directory
-putting the diff for iteration 7 into 
++ unzip_jars ../dataset/pre_nullgtn_without_s_mealPlanner/lib ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ local lib_folder=../dataset/pre_nullgtn_without_s_mealPlanner/lib
++ local extract_to=../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ '[' -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath ']'
++ rm -rf ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ mkdir -p ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/accessors-smart-1.1.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/android-json-0.0.20131108.vaadin1.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/animal-sniffer-annotations-1.14.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/aopalliance-1.0.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/asm-5.0.3.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/assertj-core-2.6.0.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/byte-buddy-1.6.14.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/byte-buddy-agent-1.6.14.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/classmate-1.3.3.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/commons-beanutils-1.9.3.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/commons-codec-1.10.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/commons-collections-3.2.2.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/commons-digester-2.1.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/commons-logging-1.3.2.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/commons-validator-1.9.0.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/diffutils-1.3.0.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/error_prone_annotations-2.1.3.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/guava-23.4-android.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/hamcrest-core-1.3.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/hamcrest-library-1.3.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/hibernate-validator-5.3.4.Final.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/j2objc-annotations-1.1.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jackson-annotations-2.8.0.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jackson-core-2.8.7.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jackson-core-asl-1.9.13.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jackson-databind-2.8.7.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jackson-mapper-asl-1.9.13.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/javassist-3.21.0-GA.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jboss-logging-3.3.0.Final.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jcl-over-slf4j-1.7.24.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/json-path-2.2.0.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/json-smart-2.2.1.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jsonassert-1.4.0.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jsoup-1.10.2.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jsr305-3.0.2.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/jul-to-slf4j-1.7.24.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/junit-4.13.2.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/log4j-over-slf4j-1.7.24.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/logback-classic-1.1.11.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/logback-core-1.1.11.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/mockito-core-2.8.9.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/objenesis-2.5.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/powermock-api-mockito-common-1.7.4.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/powermock-api-mockito2-1.7.4.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/powermock-api-support-1.7.4.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/powermock-core-1.7.4.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/powermock-module-junit4-1.7.4.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/powermock-module-junit4-common-1.7.4.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/powermock-reflect-1.7.4.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/slf4j-api-1.7.24.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/snakeyaml-1.17.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-aop-4.3.7.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-beans-4.3.7.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-autoconfigure-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-starter-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-starter-logging-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-starter-test-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-starter-tomcat-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-starter-web-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-test-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-boot-test-autoconfigure-1.5.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-context-4.3.7.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-core-4.3.7.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-expression-4.3.7.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-security-config-4.2.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-security-core-4.2.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-security-oauth2-2.1.1.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-security-web-4.2.2.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-test-4.3.7.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-web-4.3.7.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/spring-webmvc-4.3.7.RELEASE.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/tomcat-embed-core-8.5.11.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/tomcat-embed-el-8.5.11.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/tomcat-embed-websocket-8.5.11.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/truth-0.40.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/truth-java8-extension-0.40.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_nullgtn_without_s_mealPlanner/lib/validation-api-1.1.0.Final.jar -d ../dataset/pre_nullgtn_without_s_mealPlanner/classpath
++ find ../dataset/pre_nullgtn_without_s_mealPlanner/src -name '*.java'
++ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_nullgtn_without_s_mealPlanner/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_nullgtn_without_s_mealPlanner/classes -cp ../dataset/pre_nullgtn_without_s_mealPlanner/classpath @../dataset/pre_nullgtn_without_s_mealPlanner/cf_srcs.txt'
++ CLEAN_CMD='rm -rf ../dataset/pre_nullgtn_without_s_mealPlanner/classes'
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_nullgtn_without_s_mealPlanner/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_nullgtn_without_s_mealPlanner/classes -cp ../dataset/pre_nullgtn_without_s_mealPlanner/classpath @../dataset/pre_nullgtn_without_s_mealPlanner/cf_srcs.txt
+An exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing ../dataset/pre_nullgtn_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/MealPlanner-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to ../dataset/pre_nullgtn_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/MealPlanner.java
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+Caused by: java.lang.Error: Problem while parsing ../dataset/pre_nullgtn_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/MealPlanner-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to ../dataset/pre_nullgtn_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/MealPlanner.java
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1015)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:685)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1074)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+	... 8 more
+Caused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(import javax.annotation.Nullable;
+,import org.springframework.boot.SpringApplication;
+,import org.springframework.boot.autoconfigure.SpringBootApplication;
+,import org.springframework.cache.annotation.EnableCaching;
+ [size 4], [import org.springframework.boot.SpringApplication;
+, import org.springframework.boot.autoconfigure.SpringBootApplication;
+, import org.springframework.cache.annotation.EnableCaching;
+] [size 3])
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:668)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)
+	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)
+	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)
+	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1013)
+	... 17 more
+Caused by: java.lang.Throwable
+	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)
+	... 27 more

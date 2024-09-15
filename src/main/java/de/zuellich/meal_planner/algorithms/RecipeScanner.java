@@ -1,5 +1,5 @@
 package de.zuellich.meal_planner.algorithms;
-
+import javax.annotation.Nullable;
 import de.zuellich.meal_planner.datatypes.Recipe;
 
 /**
@@ -7,10 +7,10 @@ import de.zuellich.meal_planner.datatypes.Recipe;
  */
 public interface RecipeScanner {
 
-  /**
-   * @param source The source to parse.
-   * @return A basic recipe instance with name and source information resolved. No ingredients are
-   *     added.
-   */
-  Recipe parse(String source);
+    /**
+     * @param source The source to parse.
+     * @return A basic recipe instance with name and source information resolved. No ingredients are
+     *     added.
+     */
+    Recipe parse(@Nullable String source);
 }

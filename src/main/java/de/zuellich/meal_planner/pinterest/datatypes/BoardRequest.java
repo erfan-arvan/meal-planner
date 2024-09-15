@@ -1,5 +1,5 @@
 package de.zuellich.meal_planner.pinterest.datatypes;
-
+import javax.annotation.Nullable;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -8,14 +8,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class BoardRequest {
 
-  @JsonProperty(value = "data")
-  private Board board = new Board();
+    @JsonProperty(value = "data")
+    private Board board = new Board();
 
-  public Board getBoard() {
-    return board;
-  }
+    public Board getBoard() {
+        return board;
+    }
 
-  public void setBoard(Board board) {
-    this.board = board;
-  }
+    public void setBoard(Board board) {
+        this.board = board;
+    }
 }

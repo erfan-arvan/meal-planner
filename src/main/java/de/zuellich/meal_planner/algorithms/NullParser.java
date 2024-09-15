@@ -1,18 +1,19 @@
 package de.zuellich.meal_planner.algorithms;
-
+import javax.annotation.Nullable;
 import de.zuellich.meal_planner.datatypes.Recipe;
 import de.zuellich.meal_planner.datatypes.RecipeFormat;
 
-/** */
+/**
+ */
 public class NullParser implements RecipeParser {
 
-  @Override
-  public Recipe parse(String source) {
-    return new NullRecipe();
-  }
+    @Override
+    public Recipe parse(String source) {
+        return new NullRecipe();
+    }
 
-  @Override
-  public RecipeFormat getFormat() {
-    return RecipeFormat.UNKNOWN;
-  }
+    @Override
+    public RecipeFormat getFormat() {
+        return RecipeFormat.UNKNOWN;
+    }
 }

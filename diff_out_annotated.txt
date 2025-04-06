@@ -6,8 +6,9 @@ index 4bc38591..f4c64792 100644
  @Service
  public class AmountParser {
    private static final List<String> UNICODE_FRACTIONS = Arrays.asList("½", "¼", "¾");
-//Others: ImmutableMap usage
+//C10: Field type modification
 -  private static final Map<String, Float> fractionLookup;
+//Others: ImmutableMap usage
 +  private static final ImmutableMap<String, Float> fractionLookup;
    static {
 //Others: ImmutableMap usage
@@ -20,6 +21,7 @@ index 4bc38591..f4c64792 100644
 -    fractionLookup.put("3/4", 0.75f);
 -    fractionLookup.put("¾", 0.75f);
 +    fractionLookup =
+//C10: Field type modification
 +        ImmutableMap.<String, Float>builderWithExpectedSize(7)
 +            .put("1/8", 0.125f)
 +            .put("1/4", 0.25f)
@@ -38,6 +40,7 @@ index 4bc38591..f4c64792 100644
      }
 //Others: change the method being called
 -    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
+//C9: Return value modification
 +    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.getOrDefault(usedFraction, 0f);
    }
  }
@@ -67,6 +70,7 @@ index 90e72aa6..bb22e4ae 100644
 +    if (IngredientUnitLookup.instance == null) {
 +      IngredientUnitLookup.instance = new IngredientUnitLookup();
      }
+//C9: Return value modification
 -    return instance;
 +    return IngredientUnitLookup.instance;
    }
@@ -312,6 +316,7 @@ index a38fde88..86c3c9a5 100644
    @JsonCreator
    public Pin(@JsonProperty("metadata") Map<String, Object> metadata) {
      if (metadata == null || !metadata.containsKey("article")) {
+//related to previous initializations
 -      this.name = "";
        return;
      }
@@ -323,6 +328,7 @@ index a38fde88..86c3c9a5 100644
 -      name = "";
 -    }
 -    this.name = name;
+//C10: Field type modification
 +    Map<String, Object> article = (Map<String, Object>) metadata.getOrDefault("article", "");
 //C6: Qualified this reference
 +    this.name = String.valueOf(article.get("name"));
@@ -395,6 +401,7 @@ index 5342a841..d5d9e9b3 100644
 +          public void checkServerTrusted(final X509Certificate[] certs, final String authType) {}
          }
        };
+//Not a real change
 +  private SSLUtil() {
 +    throw new UnsupportedOperationException("Do not instantiate libraries.");
 +  }
